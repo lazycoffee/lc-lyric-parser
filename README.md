@@ -1,14 +1,15 @@
 # lc-lyric-parser
 A simple and easy-to-use lyric parser.
 
-## install
+## Install
 
 ```bash
 npm i lc-lyric-parser --save
 ```
 
-## usage
-
+## Usage
+lc-lyric-parser follow LRC format stander.
+### Example
 ```javascript
 const LyricParser = require('lc-lyric-parser');
 let audio = new Audio();
@@ -44,3 +45,30 @@ audio.addEventListener('pause', function () {
 });
 audio.play();
 ```
+## API
+```lc-lyric-parser``` only has few api. I design it as easy and simple.
+
+### play(audioCurrentTime)
+```lc-lyric-parser``` just like Audio object. You just need to play it and it will tell you where the current line of lyric text. You need to pass a time of current audio play point to tell ```lc-lyric-parser``` where the current time of audio.
+
+### pause()
+There is no ```stop``` function. The only way you can stop ```lc-lyric-parser``` is using ```pause``` function.
+
+## Property
+```lc-lyric-parser``` supply some useful properties.
+
+### lines
+```lc-lyric-parser``` will parse lyric string and push it to ```lines``` property. Each line has these properties:
+
+```
+lyricParser.lines.forEach(line){
+    // line.index: the index(number) of current line
+    // line.time:  the time(number) of current line
+    // line.text:  the lyric text (string) of current line
+}
+```
+### isPlaying
+If you want to know it weather playing. This property will tell you the status of playing.
+
+## Licence
+MI
