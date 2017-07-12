@@ -49,7 +49,7 @@ audio.play();
 ```lc-lyric-parser``` only has few api. I design it as easy and simple.
 
 ### play(audioCurrentTime)
-```lc-lyric-parser``` just like Audio object. You just need to play it and it will tell you where the current line of lyric text. You need to pass a time of current audio play point to tell ```lc-lyric-parser``` where the current time of audio.
+```lc-lyric-parser``` just like Audio object. You just need to play it and it will tell you where the current line of lyric. You need to pass a time of current audio play point to tell ```lc-lyric-parser``` where the current time of audio.
 
 ### pause()
 There is no ```stop``` function. The only way you can stop ```lc-lyric-parser``` is using ```pause``` function.
