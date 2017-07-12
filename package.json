@@ -1,0 +1,23 @@
+{
+  "name": "lc-lyric-parser",
+  "version": "1.0.0",
+  "description": "A simple and easy-to-use lyric parser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazycoffee/lc-lyric-parser.git"
+  },
+  "keywords": [
+    "lyric",
+    "parser"
+  ],
+  "author": "JamesYin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lazycoffee/lc-lyric-parser/issues"
+  },
+  "homepage": "https://github.com/lazycoffee/lc-lyric-parser#readme"
+}
