@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# lc-lyric-parser
+A simple and easy-to-use lyric parser.
 
-You can use the [editor on GitHub](https://github.com/lazycoffee/lc-lyric-parser/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## install
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm i lc-lyric-parser --save
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## useage
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lazycoffee/lc-lyric-parser/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```javascript
+const LyricParser = require('lc-lyric-parser');
+let audio = new Audio();
+// you can use ajax to get lyric file
+let lyricString = `
+[ti:会呼吸的痛]
+[ar:梁静茹]
+[al:崇拜]
+[by:dumbbird]
+[00:13.03]Dumbbird@虾米歌词组制作
+[01:53.90][00:00.61]
+[04:20.51][01:54.84][00:02.30]梁静茹-会呼吸的痛
+[00:05.86]作词：姚若龙 作曲：宇恒
+[00:08.66]编曲：黄中岳/安栋
+[04:26.99][01:47.93]专辑：崇拜
+`;
+lyricParser = new LyricParser(lyricString);
+audio.addEventListener('play', function () {
+    if(lyricParser && lyricParser.hasTimeLine){
+        lyricParser.play(audio.currentTime);
+    }
+});
+audio.addEventListener('pause', function () {
+    if(lyricParser && lyricParser.hasTimeLine){
+        lyricParser.pause();
+    }
+});
+audio.play();
+```
