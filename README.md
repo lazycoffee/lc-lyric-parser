@@ -71,4 +71,4 @@ lyricParser.lines.forEach(line){
 If you want to know it weather playing. This property will tell you the status of playing.
 
 ## Licence
-MI
+MIT
