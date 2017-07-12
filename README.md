@@ -8,12 +8,12 @@ npm i lc-lyric-parser --save
 ```
 
 ## Usage
-lc-lyric-parser follow LRC format stander.
+```lc-lyric-parser``` follow LRC format stander.
 ### Example
 ```javascript
 const LyricParser = require('lc-lyric-parser');
 let audio = new Audio();
-// you can use ajax to get lyric file
+// you should use ajax to get lyricString instead
 let lyricString = `
 [ti:会呼吸的痛]
 [ar:梁静茹]
