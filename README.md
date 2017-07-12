@@ -1,4 +1,4 @@
-# lc-lyric-parser
+# [lc-lyric-parser](https://lazycoffee.github.io/lc-lyric-parser)
 A simple and easy-to-use lyric parser.
 
 ## Install
