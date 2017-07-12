@@ -7,7 +7,7 @@ A simple and easy-to-use lyric parser.
 npm i lc-lyric-parser --save
 ```
 
-## useage
+## usage
 
 ```javascript
 const LyricParser = require('lc-lyric-parser');
@@ -25,7 +25,7 @@ let lyricString = `
 [00:08.66]编曲：黄中岳/安栋
 [04:26.99][01:47.93]专辑：崇拜
 `;
-lyricParser = new LyricParser(lyricString);
+let lyricParser = new LyricParser(lyricString);
 audio.addEventListener('play', function () {
     if(lyricParser && lyricParser.hasTimeLine){
         lyricParser.play(audio.currentTime);
