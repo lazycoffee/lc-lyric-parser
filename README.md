@@ -26,6 +26,12 @@ let lyricString = `
 [04:26.99][01:47.93]专辑：崇拜
 `;
 let lyricParser = new LyricParser(lyricString);
+lyricParser.lines.forEach(function(line){
+    // add line to your document
+});
+lyricParser.handler = function(line){
+    // switch lyric line by line.index
+};
 audio.addEventListener('play', function () {
     if(lyricParser && lyricParser.hasTimeLine){
         lyricParser.play(audio.currentTime);
