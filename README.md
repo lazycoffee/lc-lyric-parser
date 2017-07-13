@@ -68,7 +68,7 @@ lyricParser.lines.forEach(line){
 }
 ```
 ### isPlaying
-If you want to know it weather playing. This property will tell you the status of playing.
+If you want to know whether it is playing. This property will tell you the status of playing.
 
 ## Licence
 MIT
