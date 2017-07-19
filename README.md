@@ -70,5 +70,8 @@ lyricParser.lines.forEach(line){
 ### isPlaying
 If you want to know whether it is playing. This property will tell you the status of playing.
 
+### hasTimeLine
+Some lyric file dose't have time line. If don't, this property will be false. Don't play lyric with no time line.
+
 ## Licence
 MIT
